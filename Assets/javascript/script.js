@@ -1,4 +1,15 @@
 
+
+const storeNine = document.getElementById('9am');
+const storeTen = document.getElementById('10am');
+const storeEleven = document.getElementById('11am');
+const storeTwelve = document.getElementById('12pm');
+const storeOne = document.getElementById('13pm');
+const storeTwo = document.getElementById('14pm');
+const storeThree = document.getElementById('15pm');
+const storeFour = document.getElementById('16pm');
+const storeFive = document.getElementById('17pm');
+
 const saveBtn = document.querySelector("#save");
 const today = document.querySelector("#currentDay");
 const momentTime = moment().hours(Number);
@@ -11,106 +22,107 @@ $(document).ready(function () {
         
     });
 
-    
-//background color changes with moment js
-if (moment().format("HH") > parseInt($(storeNine).attr("data-time"))) {
-    $(storeNine).css("backgroundColor", "lightgray");
-}
-else if (moment().format("HH") === parseInt($(storeNine).attr("data-time"))) {
-    $(storeNine).css("backgroundColor", "red");
-}
-else if (moment().format("HH") < parseInt($(storeNine).attr("data-time"))) {
-	$(storeNine).css("backgroundColor", "mediumseagreen");
-}
 
+
+//background color changes with moment js
+let currentTime = moment().hour();
+if(currentTime > 9) {
+	$(storeNine).css("backgroundColor", "lightgray")
+}
+else if (currentTime === 9) {
+	$(storeNine).css("backgroundColor", "red")
+}
+else if (currentTime < 9) {
+	$(storeNine).css("backgroundColor", "mediumgreen")
+}
+	
 //Background color for 10 AM
-if (moment().format("HH") > parseInt($(storeTen).attr("data-time"))) {
-    $(storeTen).css("backgroundColor", "lightgray");
+if(currentTime > 10) {
+	$(storeTen).css("backgroundColor", "lightgray")
 }
-else if (moment().format("HH") === parseInt($(storeTen).attr("data-time"))) {
-    $(storeTen).css("backgroundColor", "red");
+else if (currentTime === 10) {
+	$(storeTen).css("backgroundColor", "red")
 }
-else if (moment().format("HH") < parseInt($(storeTen).attr("data-time"))) {
-	$(storeTen).css("backgroundColor", "mediumseagreen");
+else if (currentTime < 10) {
+	$(storeTen).css("backgroundColor", "mediumgreen")
 }
 
 //Background color for 11 AM
-if (moment().format("HH") > parseInt($(storeEleven).attr("data-time"))) {
-    $(storeEleven).css("backgroundColor", "lightgray");
+if(currentTime >  11 ) {
+	$(storeEleven).css("backgroundColor", "lightgray")
 }
-else if (moment().format("HH") === parseInt($(storeEleven).attr("data-time"))) {
-    $(storeEleven).css("backgroundColor", "red");
+else if (currentTime === 11 ) {
+	$(storeEleven).css("backgroundColor", "red")
 }
-else if (moment().format("HH") < parseInt($(storeEleven).attr("data-time"))) {
-	$(storeEleven).css("backgroundColor", "mediumseagreen");
+else if (currentTime < 11 ) {
+	$(storeEleven).css("backgroundColor", "mediumgreen")
 }
 
-//Background color for 12 PM
-if (moment().format("HH") > parseInt($(storeTwelve).attr("data-time"))) {
-    $(storeTwelve).css("backgroundColor", "lightgray");
+//Background color for 12 AM
+if(currentTime > 12  ) {
+	$(storeTwelve).css("backgroundColor", "lightgray")
 }
-else if (moment().format("HH") === parseInt($(storeTwelve).attr("data-time"))) {
-    $(storeTwelve).css("backgroundColor", "red");
+else if (currentTime === 12 ) {
+	$(storeTwelve).css("backgroundColor", "red")
 }
-else if (moment().format("HH") < parseInt($(storeTwelve).attr("data-time"))) {
-	$(storeTwelve).css("backgroundColor", "mediumseagreen");
+else if (currentTime < 12 ) {
+	$(storeTwelve).css("backgroundColor", "mediumgreen")
 }
 
 //Background color for 1 PM
-if (moment().format("HH") > parseInt($(storeOne).attr("data-time"))) {
-    $(storeOne).css("backgroundColor", "lightgray");
+if(currentTime > 13) {
+	$(storeOne).css("backgroundColor", "lightgray")
 }
-else if (moment().format("HH") === parseInt($(storeOne).attr("data-time"))) {
-    $(storeOne).css("backgroundColor", "red");
+else if (currentTime === 13) {
+	$(storeOne).css("backgroundColor", "red")
 }
-else if (moment().format("HH") < parseInt($(storeOne).attr("data-time"))) {
-	$(storeOne).css("backgroundColor", "mediumseagreen");
+else if (currentTime < 13) {
+	$(storeOne).css("backgroundColor", "mediumgreen")
 }
 
 //Background color for 2 PM
-if (moment().format("HH") > parseInt($(storeTwo).attr("data-time"))) {
-    $(storeTwo).css("backgroundColor", "lightgray");
+if(currentTime > 14) {
+	$(storeTwo).css("backgroundColor", "lightgray")
 }
-else if (moment().format("HH") === parseInt($(storeTwo).attr("data-time"))) {
-    $(storeTwo).css("backgroundColor", "red");
+else if (currentTime === 14) {
+	$(storeTwo).css("backgroundColor", "red")
 }
-else if (moment().format("HH") < parseInt($(storeTwo).attr("data-time"))) {
-	$(storeTwo).css("backgroundColor", "mediumseagreen");
+else if (currentTime < 14) {
+	$(storeTwo).css("backgroundColor", "mediumgreen")
 }
 
 //Background color for 3 PM
-if (moment().format("HH") > parseInt($(storeThree).attr("data-time"))) {
-    $(storeThree).css("backgroundColor", "lightgray");
+if(currentTime > 15) {
+	$(storeThree).css("backgroundColor", "lightgray")
 }
-else if (moment().format("HH") === parseInt($(storeThree).attr("data-time"))) {
-    $(storeThree).css("backgroundColor", "red");
+else if (currentTime === 15) {
+	$(storeThree).css("backgroundColor", "red")
 }
-else if (moment().format("HH") < parseInt($(storeThree).attr("data-time"))) {
-	$(storeThree).css("backgroundColor", "mediumseagreen");
+else if (currentTime < 15) {
+	$(storeThree).css("backgroundColor", "mediumgreen")
 }
 
 //Background color for 4 PM
-if (moment().format("HH") > parseInt($(storeFour).attr("data-time"))) {
-    $(storeFour).css("backgroundColor", "lightgray");
+if(currentTime > 16) {
+	$(storeFour).css("backgroundColor", "lightgray")
 }
-else if (moment().format("HH") === parseInt($(storeFour).attr("data-time"))) {
-    $(storeFour).css("backgroundColor", "red");
+else if (currentTime === 16) {
+	$(storeFour).css("backgroundColor", "red")
 }
-else if (moment().format("HH") < parseInt($(storeFour).attr("data-time"))) {
-	$(storeFour).css("backgroundColor", "mediumseagreen");
+else if (currentTime < 16) {
+	$(storeFour).css("backgroundColor", "mediumgreen")
 }
 
 //Background color for 5 PM
-if (moment().format("HH") > parseInt($(storeFive).attr("data-time"))) {
-    $(storeFive).css("backgroundColor", "lightgray");
+if(currentTime > 17) {
+	$(storeFive).css("backgroundColor", "lightgray")
 }
-else if (moment().format("HH") === parseInt($(storeFive).attr("data-time"))) {
-    $(storeFive).css("backgroundColor", "red");
+else if (currentTime === 17) {
+	$(storeFive).css("backgroundColor", "red")
 }
-else if (moment().format("HH") < parseInt($(storeFive).attr("data-time"))) {
-	$(storeFive).css("backgroundColor", "mediumseagreen");
+else if (currentTime < 17) {
+	$(storeFive).css("backgroundColor", "mediumgreen")
 }
-
 
 
 });
@@ -170,5 +182,7 @@ var button = $(".button1")
 button.on("click", function () {
 	anotherColor.toggleClass("another-color")
 })
+
+
 
 
